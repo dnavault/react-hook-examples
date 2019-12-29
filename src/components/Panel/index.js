@@ -20,10 +20,10 @@ function Panel({ link, image, text, title }) {
         <div>
           <img src={image} />
         </div>
-        <div>{title}</div>
+        <div className='has-text-weight-bold'>{title}</div>
 
         <div className={classnames("animated", "fadeIn", { "is-hidden": !expand })}>
-          <div>{text}</div>
+          <p>{text}</p>
 
           <footer className='card-footer' style={{ marginTop: "20px" }}>
             <p className='card-footer-item' onClick={e => externalLink(e, `https://github.com/nomastickles/react-hook-examples/tree/master/examples/${link}`)}>
