@@ -4,7 +4,7 @@ import classnames from "classnames"
 const colors = ["is-primary", "is-link", "is-info", "is-success", "is-warning", ""]
 const getRandomColor = () => colors[Math.floor(Math.random() * colors.length)]
 
-function Panel({ link1, link2, image, text, title }) {
+function Panel({ link, image, text, title }) {
   const [color] = React.useState(getRandomColor)
   const [expand, setExpand] = React.useState(false)
 
@@ -26,12 +26,15 @@ function Panel({ link1, link2, image, text, title }) {
           <div>{text}</div>
 
           <footer className='card-footer' style={{ marginTop: "20px" }}>
-            <p className='card-footer-item' onClick={e => externalLink(e, link1)}>
+            <p className='card-footer-item' onClick={e => externalLink(e, `https://github.com/nomastickles/react-hook-examples/tree/master/examples/${link}`)}>
               <span className='icon'>
                 <i className='fab fa-github' />
               </span>
             </p>
-            <p className='card-footer-item card-footer-item-2' onClick={e => externalLink(e, link2)}>
+            <p
+              className='card-footer-item card-footer-item-2'
+              onClick={e => externalLink(e, `https://codesandbox.io/s/github/nomastickles/react-hook-examples/tree/master/examples/${link}`)}
+            >
               <span>
                 <span className='icon'>
                   <i className='fas fa-laptop-code' />
