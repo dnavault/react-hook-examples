@@ -15,9 +15,6 @@ function App() {
       const data = await fetchData()
       setPanelData(chunk(data, 4))
     })()
-
-    // const lsExpandAll = localStorage.getItem("expandAll")
-    // if (lsExpandAll === "true") setExpandAll(true)
   }, [])
 
   const toggleExpand = () => {
