@@ -1,0 +1,10 @@
+body {
+  background-color: #ffebeb;
+  font-family: "Press Start 2P", cursive;
+  text-align: center;
+}
+
+.isDark {
+  color: #fff !important;
+  background-color: rgb(80, 84, 87);
+}
