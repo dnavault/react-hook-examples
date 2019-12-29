@@ -1,12 +1,16 @@
 import React from "react"
+import { sample } from "lodash"
 import classnames from "classnames"
 
 const colors = ["is-primary", "is-link", "is-info", "is-success", "is-warning", ""]
-const getRandomColor = () => colors[Math.floor(Math.random() * colors.length)]
 
-function Panel({ link, image, text, title }) {
-  const [color] = React.useState(getRandomColor)
+function Panel({ link, image, text, title, expandAll }) {
+  const [color] = React.useState(sample(colors))
   const [expand, setExpand] = React.useState(false)
+
+  React.useEffect(() => {
+    setExpand(expandAll)
+  }, [expandAll]) // listening for expandAll changes
 
   const externalLink = (e, url) => {
     e.stopPropagation()

@@ -1,3 +1,4 @@
+import { last } from "lodash"
 const googleSheetUrl = "https://spreadsheets.google.com/feeds/cells/1q6rrzA6Atw_i4RqmjffKyU01gCdTL43jcZW7smMTf9Y/1/public/full?alt=json"
 
 export async function fetchData() {
@@ -8,7 +9,7 @@ export async function fetchData() {
 
 /**
 
-1. go through [A-Z]1 and collect titleMap:
+1. go through [A-Z]1 (the first row) and collect titles corresponding to letter columns:
 
 example:
   {
@@ -34,7 +35,7 @@ function parseData(data) {
       titleMap[col] = content
     } else {
       newRow[titleMap[col]] = content
-      if (col !== Object.keys(titleMap).reverse()[0]) return
+      if (col !== last(Object.keys(titleMap))) return // there's still more to collect
       results.push({ ...newRow })
       newRow = {}
     }
