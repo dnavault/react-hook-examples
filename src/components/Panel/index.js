@@ -20,7 +20,6 @@ function Panel({ link, image, text, title, expandAll }) {
   return (
     <div className='column animated fadeIn' onClick={() => setExpand(prev => !prev)}>
       <div className={classnames("notification", color)}>
-        {/* <button className={classnames("delete", { "is-hidden": !expand })}></button> */}
         <div>
           <img src={image} />
         </div>
