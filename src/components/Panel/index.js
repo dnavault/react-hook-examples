@@ -30,12 +30,12 @@ function Panel({ link, image, text, title, expandAll }) {
   return (
     <div className='col-lg-4 col-md-6 col-12 animated fadeIn' onClick={() => setExpand(prev => !prev)}>
       <div className={classnames("card", "mb-3", color)}>
-        <div class='card-header'>
+        <div className='card-header'>
           {" "}
           <img className='w-100' src={image} />
         </div>
-        <div class='card-body'>
-          <h5 class='card-title mb-0'>{title}</h5>
+        <div className='card-body'>
+          <h5 className='card-title mb-0'>{title}</h5>
           <p className={classnames("mt-3", "card-text", "animated", "fadeIn", { "d-none": !expand })}>{text}</p>
           <div className={classnames("card-text", "animated", "fadeIn", { "d-none": !expand })}></div>
         </div>

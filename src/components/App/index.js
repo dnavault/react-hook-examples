@@ -26,18 +26,25 @@ function App() {
   }
   return (
     <>
-      <ul className='navbar navbar-expand-lg navbar-light bg-light'>
-        <span className='navbar-brand mb-0 h1'>
-          <a href='https://github.com/nomastickles/react-hook-examples' className='' target='_blank'>
-            React Hook Examples <i className='fab fa-github' />
-          </a>{" "}
-          by{" "}
-          <a href='https://nomastickles.website/' className='' target='_blank'>
-            Thomas Nickles
-          </a>
-        </span>
-        <Toggle className='is-pulled-right' expandAll={expandAll} onChange={toggleExpand} />
-      </ul>
+      <div className='navbar navbar-expand-lg navbar-light bg-light'>
+        <div className='ml-1 row w-100'>
+          <div className='col'>
+            <div className='navbar-brand mb-0 h1 w-100'>
+              <a href='https://github.com/nomastickles/react-hook-examples' className='float-left' target='_blank'>
+                React Hook Examples <i className='fab fa-github mr-1' />
+              </a>
+              <span className='float-left'> by </span>
+              <a href='https://nomastickles.website/' className='float-left' target='_blank'>
+                {" "}
+                Thomas Nickles
+              </a>
+            </div>
+          </div>
+          <div className='col'>
+            <Toggle expandAll={expandAll} onChange={toggleExpand} />
+          </div>
+        </div>
+      </div>
 
       <div style={{ padding: "20px" }} className='container'>
         {!panelData.length && <Loader color='#fff' size='50px' margin='10px' css={{ margin: "0 auto" }} />}
