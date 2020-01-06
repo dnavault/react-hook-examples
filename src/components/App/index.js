@@ -13,7 +13,8 @@ function App() {
   React.useEffect(() => {
     ;(async () => {
       const data = await fetchData()
-      setPanelData(chunk(data, 4))
+      //setPanelData(chunk(data, 3))
+      setPanelData(data)
     })()
   }, [])
 
@@ -25,22 +26,25 @@ function App() {
   }
   return (
     <>
-      <section style={{ padding: "20px" }} className='hero  has-background-white'>
+      <ul className='navbar navbar-expand-lg navbar-light bg-light'>
+        <span className='navbar-brand mb-0 h1'>
+          <a href='https://github.com/nomastickles/react-hook-examples' className='' target='_blank'>
+            React Hook Examples <i className='fab fa-github' />
+          </a>{" "}
+          by{" "}
+          <a href='https://nomastickles.website/' className='' target='_blank'>
+            Thomas Nickles
+          </a>
+        </span>
         <Toggle className='is-pulled-right' expandAll={expandAll} onChange={toggleExpand} />
-      </section>
-      <section style={{ padding: "20px" }} className='hero has-background-grey-light'>
+      </ul>
+
+      <div style={{ padding: "20px" }} className='container'>
+        {!panelData.length && <Loader color='#fff' size='50px' margin='10px' css={{ margin: "0 auto" }} />}
         <LazyLoad>
-          {!panelData.length && <Loader color='#fff' size='50px' margin='10px' css={{ margin: "0 auto" }} />}
-          {!!panelData.length &&
-            panelData.map((panels, index) => (
-              <div key={index} className='columns is-centered'>
-                {panels.map((data, index) => (
-                  <Panel key={index} {...data} expandAll={expandAll} />
-                ))}
-              </div>
-            ))}
+          <div className='row'>{!!panelData.length && panelData.map((data, index) => <Panel key={index} {...data} expandAll={expandAll} />)}</div>
         </LazyLoad>
-      </section>
+      </div>
     </>
   )
 }

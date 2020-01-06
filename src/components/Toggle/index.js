@@ -1,12 +1,12 @@
 import React from "react"
+import classnames from "classnames"
 
 function Toggle({ onChange, expandAll }) {
   return (
-    <div className='is-pulled-right'>
-      <div className='field is-pulled-right'>
-        <input onChange={onChange} id='toggle' type='checkbox' name='toggle' className='switch' checked={expandAll} />
-        <label htmlFor='toggle'>Expand All</label>
-      </div>
+    <div className='w-100'>
+      <button onClick={onChange} type='button' className={classnames("float-right ", "btn", { "btn-primary": !expandAll, "btn-secondary": expandAll })}>
+        {expandAll ? "collapse -" : "expand +"}
+      </button>
     </div>
   )
 }
