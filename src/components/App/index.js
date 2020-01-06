@@ -33,9 +33,8 @@ function App() {
               <a href='https://github.com/nomastickles/react-hook-examples' className='float-left' target='_blank'>
                 React Hook Examples <i className='fab fa-github mr-1' />
               </a>
-              <span className='float-left'> by </span>
+              <span className='float-left mr-1'> by </span>
               <a href='https://nomastickles.website/' className='float-left' target='_blank'>
-                {" "}
                 Thomas Nickles
               </a>
             </div>
