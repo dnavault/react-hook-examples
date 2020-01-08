@@ -1,5 +1,5 @@
 {
-  "name": "w10d2-redux-example",
+  "name": "redux-simple-store-object",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
