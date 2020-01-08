@@ -1,5 +1,5 @@
 {
-  "name": "redux-simple-store-object",
+  "name": "redux-simple-object-state",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
