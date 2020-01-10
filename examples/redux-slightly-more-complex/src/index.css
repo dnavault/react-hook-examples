@@ -1,0 +1,13 @@
+body {
+  height: 100vh;
+  background-color: #b5b5b5;
+}
+
+.card {
+  cursor: pointer;
+}
+
+/* .modal.show {
+  display: block;
+  padding-right: 0px;
+} */
