@@ -5,7 +5,6 @@ import shortid from "shortid"
 import { sample } from "lodash"
 import * as Spinners from "react-spinners"
 import { fetchAndSetCard } from "./actions"
-import Interactions from "../Interactions"
 
 function Card({ bgColor }) {
   const dispatchRedux = useDispatch()
@@ -32,9 +31,6 @@ function Card({ bgColor }) {
             </div>
           )}
           {content && <img className={"animated fadeIn"} src={content} />}
-          {/* <div className='mt-3'>
-            <Interactions />
-          </div> */}
         </div>
       </div>
     </div>

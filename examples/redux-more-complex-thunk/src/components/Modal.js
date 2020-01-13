@@ -1,7 +1,8 @@
 import React from "react"
+import Interactions from "./Interactions"
 import { useSelector, useDispatch } from "react-redux"
 
-function Modal() {
+function Modal({ bgColor }) {
   const selectedId = useSelector(appState => appState.card.selectedId)
   const content = useSelector(appState => appState.card.contentById[selectedId])
   const dispatchRedux = useDispatch()
@@ -31,9 +32,14 @@ function Modal() {
             </button>
           </div>
 
-          <div className='modal-body text-center' style={{ maxHeight: "270px" }}>
-            {content && <img style={{ maxHeight: "220px" }} src={content} />}
+          <div className='modal-body text-center'>
+            <div style={{ maxHeight: "270px" }}>{content && <img style={{ maxHeight: "220px" }} src={content} />}</div>
+
+            <div className='mt-3 mb-2'>
+              <Interactions />
+            </div>
           </div>
+
           <div className='modal-footer'>
             <button type='button' className='btn btn-secondary' data-dismiss='modal' onClick={closeModal}>
               Close
