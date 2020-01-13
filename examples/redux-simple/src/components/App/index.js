@@ -1,5 +1,5 @@
 import React from "react"
-import lodash from "lodash"
+import { sample } from "lodash"
 import Card from "../Card"
 import { colors } from "../Card"
 import Filter from "../Filter"
@@ -14,7 +14,7 @@ function App() {
       <div style={{ padding: "20px" }} className='container'>
         <div className='row'>
           {colors.map((color, index) => (
-            <Card key={index} color={colors[lodash.random(0, colors.length - 1)]} />
+            <Card key={index} color={sample(colors)} />
           ))}
         </div>
       </div>

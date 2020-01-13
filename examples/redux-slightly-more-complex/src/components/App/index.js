@@ -1,5 +1,5 @@
 import React from "react"
-import { random } from "lodash"
+import { sample } from "lodash"
 import Card from "../Card"
 import { useSelector } from "react-redux"
 import Filter from "../Filter"
@@ -27,7 +27,7 @@ function App() {
           <div className='col-9'>
             <div className='row'>
               {colors.map((color, index) => (
-                <Card key={index} color={colors[random(0, colors.length - 1)]} />
+                <Card key={index} color={sample(colors)} />
               ))}
             </div>
           </div>
