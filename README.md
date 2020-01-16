@@ -4,9 +4,9 @@
 - a React app that pulls JSON from a google spreadsheet to populate said examples
 - is itself an example / template for students
 
-#### [Website Demo](https://nomastickles.github.io/react-hook-examples/)
+#### [website demo](https://nomastickles.github.io/react-hook-examples/)
 
-#### [Codesandbox.io Demo](https://codesandbox.io/s/github/nomastickles/react-hook-examples)
+#### [codesandbox.io demo](https://codesandbox.io/s/github/nomastickles/react-hook-examples)
 
 ////////////////
 

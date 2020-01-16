@@ -1,5 +1,4 @@
 import React from "react"
-import { chunk } from "lodash"
 import { GridLoader as Loader } from "react-spinners"
 import LazyLoad from "react-lazyload"
 import { fetchData } from "./actions"
@@ -13,7 +12,6 @@ function App() {
   React.useEffect(() => {
     ;(async () => {
       const data = await fetchData()
-      //setPanelData(chunk(data, 3))
       setPanelData(data)
     })()
   }, [])
