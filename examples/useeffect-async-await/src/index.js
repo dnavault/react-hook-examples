@@ -4,7 +4,6 @@ import Section from "./Section";
 
 import "./styles.scss";
 
-const apiKey = process.env.API_KEY;
 const searchTerm = "art";
 const fetchUrl = `https://api.giphy.com/v1/gifs/search?q=${searchTerm}&limit=50&api_key=9XVJXMWpaIfCbPWQYsrSiTWl5jUWi0op`;
 
