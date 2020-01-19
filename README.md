@@ -1,6 +1,6 @@
 ## Welcome! This is:
 
-- a teaching aid showcasing different examples of using React hooks (including Redux hooks)
+- a teaching aid showcasing different examples of React hooks (including Redux hooks)
 - a React app that pulls JSON from a google spreadsheet to populate said examples
 - is itself an example / template for students
 
